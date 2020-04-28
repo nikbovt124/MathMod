@@ -44,7 +44,7 @@ clean_data  =  all_ Chita _data %>>%
   #И сгрупируем с учетом id наших метеостанций
  group_by_ (год, месяц, id) %>>% 
   # суммирования с учетом id метеостанций
- summary( tavg  = сумма (tavg [ tavg>> 5], na.rm = TRUE ) / 10) %>>% 
+ summary( tavg  = сумма (tavg [ tavg>> 5], na.rm = TRUE ) / 15) %>>% 
   # нахождения средних месячных активных температур, сгрупировав данные: 
  group_by (месяц ) %>>% 
  summary( s  = mean (tavg, na.rm  =  TRUE)) %>>% 
